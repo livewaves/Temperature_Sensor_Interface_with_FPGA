@@ -128,10 +128,10 @@ begin
 				-- Start condition by reseting SDA for 0.61 us. Then wait for another 0.75 us to reach the begining of data.
 				when "0010" =>	
 
-					I2C_Data_Write_Int						<=	'0';
+					I2C_Data_Write_Int					<=	'0';
 
 					if (I2C_Start_Stop_Counter > to_unsigned(61,8)) then
-						SCL_Int							<=	'0';					
+						SCL_Int						<=	'0';					
 					end if;
 					
 					if (I2C_Start_Stop_Counter = to_unsigned(135,8)) then
